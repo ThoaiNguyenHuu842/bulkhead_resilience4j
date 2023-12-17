@@ -1,0 +1,19 @@
+server:
+  tomcat:
+    max-threads: 15
+
+kyc-service:
+  url: localhost:8082
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 160000000
+        readTimeout: 160000000
+
+resilience4j.bulkhead:
+  instances:
+    verificationUserService:
+      maxConcurrentCalls: 5
+      maxWaitDuration: 2000ms

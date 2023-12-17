@@ -3,7 +3,7 @@
 Bulkhead pattern improves system resilience by creating separate, isolated compartments for different parts of a system. 
 It’s inspired by the bulkheads on ships that prevent the entire vessel from flooding if one section is breached.
 
-Within this project - a home loan application using an external KYC API to verify newly registration users, 
+Within this project - an E-commerce system using an external KYC API to verify newly registration users, 
 we will apply Bulkhead to the **VerificationService** using **Resilience4j** library to 
 limit only a few concurrent requests to the registration feature when the KYC API is very slow. 
 We will also create an integration test to verify whether bulkhead works as our expectiation.
